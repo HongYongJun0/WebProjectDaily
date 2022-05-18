@@ -1,0 +1,10 @@
+#nav {
+    z-index: 3;
+    background-color: gray;
+    position: fixed;
+    height: 10000px;
+    width: 200px;
+    top: 0;
+    left: -300px;
+    transition: all 0.5s;
+}
