@@ -9,6 +9,7 @@
     request.setCharacterEncoding("utf-8");
     String id = request.getParameter("id_value");
     String YM = request.getParameter("YearMonth");
+    String pos = request.getParameter("position");
 
     Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection(
@@ -24,7 +25,7 @@
 
     ResultSet result = query.executeQuery();
 
-    String[] data = new String[2];
+    String[] data = new String[3];
     while(result.next()) {
         data[0] = result.getString("userId");
         data[1] = result.getString("YearMonth");
@@ -56,6 +57,11 @@
     hiddenField2.setAttribute("name", "YearMonth");
     hiddenField2.setAttribute("value", "<%=YM%>");
     form.appendChild(hiddenField2);
+    var hiddenField3 = document.createElement("input");
+    hiddenField3.setAttribute("type", "hidden")
+    hiddenField3.setAttribute("name", "position");
+    hiddenField3.setAttribute("value", "<%=pos%>");
+    form.appendChild(hiddenField3);
     document.body.appendChild(form);
     form.submit();
 

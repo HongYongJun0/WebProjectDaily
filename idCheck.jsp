@@ -23,9 +23,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>아이디 중복확인</title>
+    <link rel="stylesheet" type="text/css" href="signupPage.css">
 </head>
 <body>
-    <input type="button" onclick="idCheck()" value="아이디 중복확인">
+    <div id="checkOverlap">
+        <input type="button" onclick="idCheck()" value="아이디 중복확인" id="checkOverlapButton">
+    </div>
+
 </body>
 <script>
     var isIdChecked = 0;

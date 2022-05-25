@@ -4,7 +4,6 @@
 <%@ page import="java.sql.Connection"%>
 <%@ page import="java.sql.PreparedStatement"%>
 <%@ page import="java.sql.ResultSet"%>
-<%@ page import="java.util.Vector"%>
 <%
 
     request.setCharacterEncoding("utf-8");
@@ -25,15 +24,14 @@
 
     ResultSet result = query.executeQuery();
 
-    String[][] data = new String[100][3];
+    String[] data = new String[3];
 
-    int index = 0;
-    while (result.next()) {
-        data[index][0] = result.getString(3);
-        data[index][1] = result.getString(4);
-        data[index][2] = result.getString(2);
-        index++;
+    while(result.next()) {
+        data[0] = result.getString(3);
+        data[1] = result.getString(4);
+        data[2] = result.getString(2);    
     }
+
 %>
 
 <head>
@@ -55,7 +53,7 @@
     else {
         YM = year + '' + month;
     }
-    if("<%=data[0][0]%>" != "null" && "<%=data[0][1]%>" != "null") { 
+    if("<%=data[0]%>" != "null" && "<%=data[1]%>" != "null") { 
         alert("로그인 성공");
         var form = document.createElement("form");
         form.setAttribute("charset", "UTF-8");
@@ -65,7 +63,7 @@
         var hiddenField = document.createElement("input");
         hiddenField.setAttribute("type", "hidden")
         hiddenField.setAttribute("name", "id_value");
-        hiddenField.setAttribute("value", "<%=data[0][0]%>");
+        hiddenField.setAttribute("value", "<%=data[0]%>");
         form.appendChild(hiddenField);
         var today = document.createElement("input");
         today.setAttribute("type", "hidden")
@@ -75,7 +73,7 @@
         var position = document.createElement("input");
         position.setAttribute("type", "hidden")
         position.setAttribute("name", "position");
-        position.setAttribute("value", "<%=data[0][2]%>");
+        position.setAttribute("value", "<%=data[2]%>");
         form.appendChild(position);
         document.body.appendChild(form);
         form.submit();

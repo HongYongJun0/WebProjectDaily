@@ -5,29 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="signupPage.css">
 </head>
 <body>
-    <form name = "signupform"action ="signupconfirm.jsp" onsubmit="return formCheck();" method="post">
-        <p>아이디 입력</p>
-        <input type="text" name = "user_id" id="user_id">
-        <input type="button" value="아이디 중복확인" id="user_id_check" onclick="idCheck();">
-        <input type="hidden" name = "mid"id="mid">
-        <p>비밀번호 입력</p>
-        <input type="password" name = "user_pw" id="user_pw">
-        <p>비밀번호 확인</p>
-        <input type="password" id="user_pw_check">
-        <p>이름 입력</p>
-        <input type="text" name = "user_name" id="user_name">
-        <p>직책 선택</p>
-        <select name="position">
-            <option value="1">사원</option>
-            <option value="2">팀장</option>
-            <option value="3">관리자</option>
-        </select>
-        <p><button>회원가입</button></p>
-    </form>
+    <div class="wrap">
+        <div class="signup">
+            <form name = "signupform"action ="signupconfirm.jsp" onsubmit="return formCheck();" method="post">
+                <header>Daily</header>
+                <p>아이디 입력</p>
+                <input type="text" name = "user_id" id="user_id" onchange="resetisIdChecked()">
+                <input type="button" value="아이디 중복확인" id="user_id_check" onclick="idCheck();">
+                <input type="hidden" name = "mid"id="mid">
+                <p>비밀번호 입력</p>
+                <input type="password" name = "user_pw" id="user_pw">
+                <p>비밀번호 확인</p>
+                <input type="password" id="user_pw_check">
+                <p>이름 입력</p>
+                <input type="text" name = "user_name" id="user_name">
+                <p>직책 선택</p>
+                <select name="position" id="selectPosition">
+                    <option value="1">사원</option>
+                    <option value="2">팀장</option>
+                    <option value="3">관리자</option>
+                </select>
+                <p><button id="signupButton">회원가입</button></p>
+            </form>
+        </div>
+    </div>
+
 </body>
 <script>
+    function resetisIdChecked() {
+        document.getElementById("mid").value = 0;
+    }
     function formCheck() {
         var user_id = document.getElementById("user_id");
         var user_pw = document.getElementById("user_pw");
@@ -50,7 +60,14 @@
     }
 
     function idCheck() {
-        window.open('idCheck.jsp', '중복체크', 'width=500, height=500');
+        var user_id = document.getElementById("user_id");
+        if(user_id.value.length == 0) {
+            alert("아이디를 기입해 주세요");
+        }
+        else {
+            window.open('idCheck.jsp', '중복체크', 'width=500, height=500');
+        }
+
     }
 
 </script>

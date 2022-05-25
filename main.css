@@ -1,10 +1,178 @@
+body {
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+    margin: 0;
+}
+#menuButton {
+    margin-left: 15px;
+    margin-right: 45px;
+    cursor: pointer;
+}
+#hiddenMenuButton {
+    display: none;
+    margin-left: 15px;
+    margin-right: 45px;
+}
+.hideMenuButtonComponent {
+    width: 35px;
+    height: 5px;
+    background-color:#309072;
+    margin: 6px 0;
+}
+.menuButtonComponent {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
 #nav {
     z-index: 3;
-    background-color: gray;
+    background-color: white;
     position: fixed;
     height: 10000px;
     width: 200px;
     top: 0;
     left: -300px;
     transition: all 0.5s;
+    border: 1px solid black;
+}
+#closeNavButton {
+    float: right;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+header {
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: #309072;
+}
+#logo {
+    margin: 0;
+    font-size: 40px;
+}
+.userInfo {
+    margin-right: 5px;
+}
+#changeYM {
+    z-index: 2;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    top: 60px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: #495777;
+}
+.changeMonth {
+    background-color: #495777;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#scheduleList {
+    padding-top: 90px;
+    padding-left: 0;
+
+}
+#otherInfo {
+    justify-content: space-evenly;
+}
+.scheduleListComponent {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.modifyButton {
+    width: 60px;
+    height: 30px;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+    font-size: 16px;
+    border: none;
+    background-color: #309072;
+}
+.deleteButton {
+    width: 60px;
+    height: 30px;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+    font-size: 15px;
+    border: none;
+    background-color: #309072;
+    margin: 10px;
+}
+.hiddenModifySchedule {
+    margin: 0;
+}
+.timeOrPlan {
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+}
+.applyOrCancelButton {
+    width: 60px;
+    height: 30px;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+    font-size: 16px;
+    border: none;
+    background-color: #309072;
+    margin: 5px;
+}
+#addSchedule {
+    width: 100%;
+    height: 60px;
+    border-radius: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+}
+#scheduleForm {
+    width: 100%;
+    height: 60px;
+    display: none;
+    align-items: center;
+    border: 1px solid black;
+}
+.dateOrTime {
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+}
+#newPlan {
+    border-radius: 0;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
 }

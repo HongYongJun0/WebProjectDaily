@@ -1,0 +1,44 @@
+.wrap {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.login {
+  width: 30%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header {
+    font-family: 'Ikaros Sans';
+    font-size: 48px;
+}
+input[type="text"], input[type="password"] {
+    width: 250px;
+    height: 40px;
+    border-radius: 0;
+    outline: none;
+    font-family: 'Ikaros Sans', '나눔스퀘어OTF';
+    font-size: 20px;
+}
+#loginButton {
+    width: 250px;
+    height: 40px;
+    border-radius: 0;
+    font-family: '나눔스퀘어 OTF';
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #309072;
+}
+#signupButton {
+    border: none;
+    font-family: '나눔스퀘어 OTF';
+    background-color: white;
+    cursor: pointer;
+}

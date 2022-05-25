@@ -34,10 +34,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signupconfirm Page</title>
+    <link rel="stylesheet" type="text/css" href="signupconfirm.css?after">
 </head>
 <body>
-    <h1>회원가입 확인</h1>
+    <div id="signupConfirmMessage">회원가입이 완료되었습니다</div>
     <form action="index.jsp" method="post">
-        <input type="submit" value="로그인 페이지">
+        <input type="submit" value="로그인 페이지로 돌아가기" id="backToLoginPage">
     </form>
 </body>
