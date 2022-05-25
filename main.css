@@ -28,7 +28,8 @@ body {
     z-index: 3;
     background-color: white;
     position: fixed;
-    height: 10000px;
+    /* height: 10000px; */
+    height: 100%;
     width: 200px;
     top: 0;
     left: -300px;
